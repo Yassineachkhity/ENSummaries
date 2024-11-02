@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link href="/dist/styles.css" rel="stylesheet">
+
 </head>
-<body>
-    
+<body class="min-h-screen bg-white">
+
+    <nav class="bg-primary p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <div class="text-white font-bold">ENSummaries</div>
+            <div class="text-white space-x-4 flex "> 
+                <a href="#" class="hover:text-gray-200">Home</a>
+                <a href="#" class="hover:text-gray-200">Notes</a>
+                <a href="#" class="hover:text-gray-200">Contact</a>
+            </div>
+        </div>
+        
+        <div class="relative">
+            <input type="text" placeholder="Search notes..." class="pl-8 pr-4 py-1 rounded-md">
+            <svg class="absolute left-2 top-2 h-4 w-4 text-gray-400" fill="currentColor" viewbox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+              </svg>
+        </div>
+    </nav>
+
+    <div class="max-w-2xl mx-auto mt-12 p-4">
+        <h1 class="text-center text-2xl mb-2 font-semibold">Welcome to ENSummaries</h1>
+        <p class="text-center text-gray-600 mb-6">"Share and Access the Summaries at ENSAM"</p>
+
+        <button class="block mx-auto bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-600">
+            Start Now
+        </button>
+    </div>
+
 </body>
 </html>
