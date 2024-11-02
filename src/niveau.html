@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSummaries - Niveau</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function toggleList(id) {
+            const list = document.getElementById(id);
+            list.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <nav class="bg-blue-500 p-4 flex justify-between items-center">
+        <div class="text-white font-bold text-xl">ENSummaries</div>
+        <div class="space-x-4 text-white">
+            <a href="index.html" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">Notes</a>
+            <a href="#" class="hover:underline">Contact</a>
+        </div>
+        <div class="flex items-center space-x-2">
+            <input type="text" placeholder="Hinted search text" class="rounded-md p-2">
+            <button class="p-2 bg-white text-blue-500 rounded-md">🔍</button>
+            <div class="rounded-full bg-white w-8 h-8 flex items-center justify-center text-blue-500">👤</div>
+        </div>
+    </nav>
+
+    <section class="max-w-3xl mx-auto my-12">
+        <h2 class="text-center text-2xl font-semibold text-gray-700 mb-8">Niveau</h2>
+
+        <div class="bg-gray-200 p-4 rounded-lg shadow-md flex justify-between items-center mb-4">
+            <div class="flex items-center space-x-4">
+                <span>🎓</span>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Cycle préparatoire</h3>
+                    <p class="text-gray-500">API1 - API2</p>
+                </div>
+            </div>
+            <button class="text-gray-600" onclick="toggleList('preparatoireList')">▼</button>
+        </div>
+        <ul id="preparatoireList" class="hidden mb-4 space-y-2">
+            <li class="bg-white w-1/2 mx-auto p-2 rounded-md shadow-md text-center">API1</li>
+            <li class="bg-white w-1/2 mx-auto p-2 rounded-md shadow-md text-center">API2</li>
+        </ul>
+
+        
+        <div class="bg-gray-200 p-4 rounded-lg shadow-md flex justify-between items-center mb-4">
+            <div class="flex items-center space-x-4">
+                <span>🎓</span>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700">Cycle Ingénieur</h3>
+                    <p class="text-gray-500">CI1 - CI2 - CI3</p>
+                </div>
+            </div>
+            
+            <button class="text-gray-600" onclick="toggleList('ingenieurList')">▼</button>
+        </div>
+        
+        <ul id="ingenieurList" class="hidden mb-4 space-y-2">
+            <li class="bg-white w-1/2 mx-auto p-2 rounded-md shadow-md text-center">CI1</li>
+            <li class="bg-white w-1/2 mx-auto p-2 rounded-md shadow-md text-center">CI2</li>
+            <li class="bg-white w-1/2 mx-auto p-2 rounded-md shadow-md text-center">CI3</li>
+        </ul>
+
+        
+        <div class="mt-12 space-y-6">
+            <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h4 class="font-semibold text-gray-700">Développement Web</h4>
+                    <p class="text-blue-500 hover:underline">➔ View summaries</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h4 class="font-semibold text-gray-700">Réseaux Informatique</h4>
+                    <p class="text-blue-500 hover:underline">➔ View summaries</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h4 class="font-semibold text-gray-700">Outils d'aide à la décision</h4>
+                    <p class="text-blue-500 hover:underline">➔ View summaries</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md flex justify-between items-center">
+                <div>
+                    <h4 class="font-semibold text-gray-700">Langue</h4>
+                    <p class="text-blue-500 hover:underline">➔ View summaries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between">
+            <div>
+                <h3 class="font-semibold">Explore</h3>
+                <ul class="space-y-1 mt-2">
+                    <li><a href="#" class="hover:underline">About</a></li>
+                    <li><a href="#" class="hover:underline">Contact-us</a></li>
+                    <li><a href="#" class="hover:underline">Invite a friend</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold">Support</h3>
+                <ul class="space-y-1 mt-2">
+                    <li><a href="#" class="hover:underline">Help/FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Accessibility</a></li>
+                    <li><a href="#" class="hover:underline">Email</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold">Legal</h3>
+                <ul class="space-y-1 mt-2">
+                    <li><a href="#" class="hover:underline">Copyright</a></li>
+                    <li><a href="#" class="hover:underline">Terms</a></li>
+                    <li><a href="#" class="hover:underline">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500">
+            <p>Follow us on:</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="hover:text-gray-400">📘</a>
+                <a href="#" class="hover:text-gray-400">📸</a>
+                <a href="#" class="hover:text-gray-400">📹</a>
+                <a href="#" class="hover:text-gray-400">🔗</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
