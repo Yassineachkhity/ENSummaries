@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
-  <link href="/dist/styles.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body class="min-h-screen bg-gray-100">
 
@@ -25,28 +24,23 @@
             <input type="text" placeholder="Search notes..." class="pl-8 pr-4 py-1 rounded-md">
             <svg class="absolute left-2 top-2 h-4 w-4 text-gray-400" fill="currentColor" viewbox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-              </svg>
+                </svg>
         </div>
     </nav>
 
-    <!-- Welcome section -->
-    <div class="max-w-2xl mx-auto mt-12 p-4">
-        <h1 class="text-center text-2xl mb-2 font-semibold">Welcome to ENSummaries</h1>
-        <p class="text-center text-gray-600 mb-6">"Share and Access the Summaries at ENSAM"</p>
+    <!-- Summaries for the related module -->
+    <h1 id="module-title" class="text-center font-bold text-3xl mb-2 mt-8 underline"></h1>
 
-        <button class="block mx-auto bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-600">
-           <a href="niveau.html">Start Now</a>
-        </button>
-    </div>
+    <script>
 
-    <!-- top Summaries section -->
-    <section class="max-w-3xl mx-auto my-12">
-        <h2 class="text-center text-2xl font-semibold text-gray-700 mb-8">Top Summaries</h2>
-        <div id="summaries-container" class="space-y-6">
-            <!-- Les résumés seront affichés ici -->
-        </div>
-      </section>
-    
+    </script>
+
+    <main class="max-w-4xl mx-auto my-8 px-4">
+      <h1 class="text-center text-2xl font-semibold text-gray-700 mb-8">Summaries</h1>
+          
+      <!-- Conteneur pour afficher les résumés -->
+      <div id="module-summaries-container" class="space-y-4"></div>
+
       <div id="comment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div class="bg-white rounded-lg p-6 w-full max-w-lg">
           <div class="flex justify-between items-center mb-4">
@@ -68,15 +62,11 @@
           </div>
         </div>
       </div>
-    
 
-      <!-- ABOUT section -->
-      <section class="bg-gray-200 py-12 text-center">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-4">About</h2>
-        <p class="max-w-2xl mx-auto text-gray-600">
-            ENSummaries allows students to explore study materials and insights from their peers, providing a richer understanding of topics through different viewpoints.
-        </p>
-    </section>
+      <button class="block mx-auto bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-600  mt-6" onclick="displayMore()">
+        See More
+     </button>
+    </main>
 
     <footer class="bg-gray-800 text-white py-8">
       <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between">
@@ -115,8 +105,9 @@
           </div>
       </div>
   </footer>
-    
-        <script src="scripts/script.js"></script>
 
+
+
+          <script src="scripts/moduleScript.js"></script>
 </body>
 </html>
