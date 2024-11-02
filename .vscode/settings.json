@@ -1,5 +1,6 @@
 {
     "javascript.validate.enable": false,   
     "typescript.validate.enable": false,   
-    "css.lint.compatibility": "ignore"     
+    "css.lint.compatibility": "ignore",
+    "liveServer.settings.port": 5501
 }
