@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Space</title>
+    <title>login Page</title>
     <link href="/dist/styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 min-h-screen">
-
+<body>
     <!-- Navigation bar -->
     <nav class="bg-primary p-4 flex justify-between items-center">
         <div class="flex items-center space-x-10 justify-evenly hidden sm:flex">
@@ -75,62 +74,8 @@
     </nav>
    <!--#################################################-->
 
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto p-6">
-        <h1 class="text-3xl font-semibold text-gray-800 mb-4 text-center">Personal Space</h1>
 
-        <!-- Upload Section -->
-        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
-            <h2 class="text-xl font-semibold mb-4">Upload a new summary</h2>
-            <form id="uploadForm">
-                <div class="space-y-4">
-                    <div>
-                        <label for="niveau" class="block text-sm font-medium text-gray-700">Niveau</label>
-                        <select id="niveau" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
-                            <option>Choose Niveau</option>
-                            <option>API1</option>
-                            <option>API2</option>
-                            <option>CI1</option>
-                            <option>CI2</option>
-                            <option>CI3</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="filiere" class="block text-sm font-medium text-gray-700">Filière</label>
-                        <select id="filiere" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
-                            <option value="">Choose Branch</option>
-                            <option>IAGI</option>
-                            <option>MSEI</option>
-                            <option>GEM</option>
-                            <option>GMSI</option>
-                            <option>GSI</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="module" class="block text-sm font-medium text-gray-700">Module</label>
-                        <select id="module" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
-                            <option>Choose Module</option>
-                            <option>Module1</option>
-                            <option>Module2</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="button" onclick="uploadSummary()" class="mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full">Upload</button>
-            </form>
-        </section>
 
-        <h1 class="text-3xl font-semibold text-gray-800 mb-4 text-center">My Summaries</h1>
-        <!-- Personal Summary List -->
-        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
-            <div id="summaries-container" class="space-y-6">
-                <!-- Les résumés seront affichés ici -->
-            </div>
-        </section>
-
-        <button class="bg-primary text-white py-2 px-6 rounded-lg hover:bg-blue-600 w-full">See more</button>
-    </main>
-
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between">
             <div>
@@ -168,17 +113,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="scripts/mySummaries.js"></script>
-
-    <script>
-        function uploadSummary() {
-            alert('Summary uploaded successfully!');
-        }
-
-        function deleteSummary() {
-            alert('Summary deleted!');
-        }
-    </script>
+    
 </body>
 </html>
