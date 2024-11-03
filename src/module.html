@@ -20,12 +20,21 @@
             </div>
         </div>
         
-        <div class="relative">
-            <input type="text" placeholder="Search notes..." class="pl-8 pr-4 py-1 rounded-md">
-            <svg class="absolute left-2 top-2 h-4 w-4 text-gray-400" fill="currentColor" viewbox="0 0 20 20">
-                <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-                </svg>
+        <div class="border-4 md:hidden">
+          <svg class=" left-2 top-2 h-5 w-5 text-gray-400 md:hidden " fill="currentColor" viewbox="0 0 20 20">
+            <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+          </svg>
+          
         </div>
+
+        
+        <div class="hidden md:block flex justify-center items-center">
+          <div class="flex justify-evenly border-black border-4 items-center relative">
+            <input type="text" placeholder="Search notes..." class="w-16 hidden md:block md:w-48 pl-8 pr-4 py-1 rounded-md ">
+            <svg class=" left-2 top-2 h-4 w-4 text-gray-400 absolute" fill="currentColor" viewbox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+              </svg>
+          </div>
     </nav>
 
     <!-- Summaries for the related module -->
@@ -40,6 +49,7 @@
           
       <!-- Conteneur pour afficher les résumés -->
       <div id="module-summaries-container" class="space-y-4"></div>
+
 
       <div id="comment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div class="bg-white rounded-lg p-6 w-full max-w-lg">
