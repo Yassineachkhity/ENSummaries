@@ -8,24 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav class="bg-primary p-4 flex justify-between items-center">
-        <div class="flex items-center space-x-4">
-            <div class="text-white font-bold">ENSummaries</div>
-            <div class="text-white space-x-4 flex "> 
-                <a href="index.html" class="hover:text-gray-200">Home</a>
-                <a href="niveau.html" class="hover:text-gray-200">Notes</a>
-                <a href="contact.html" class="hover:text-gray-200">Contact</a>
-            </div>
+<!-- Navigation bar -->
+<nav class="bg-primary p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+        <div class="text-white font-bold">ENSummaries</div>
+        <div class="text-white space-x-4 flex"> 
+            <a href="index.html" class="hover:text-gray-200">Home</a>
+            <a href="niveau.html" class="hover:text-gray-200">Notes</a>
+            <a href="contact.html" class="hover:text-gray-200">Contact</a>
         </div>
+    </div>
+    
+    <!-- Boutons Se Connecter et S'inscrire -->
+    <div class="flex space-x-4">
+        <a href="login.html" class="bg-white text-primary font-bold py-1 px-4 rounded hover:bg-gray-100">
+            Se Connecter
+        </a>
+        <a href="signup.html" class="bg-white text-primary font-bold py-1 px-4 rounded hover:bg-gray-100">
+            S'inscrire
+        </a>
+    </div>
+</nav>
 
-        <div class="relative">
-            <input type="text" placeholder="Search notes..." class="pl-8 pr-4 py-1 rounded-md">
-            <svg class="absolute left-2 top-2 h-4 w-4 text-gray-400" fill="currentColor" viewbox="0 0 20 20">
-                <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-              </svg>
-        </div>
-    </nav>
 
 
 
