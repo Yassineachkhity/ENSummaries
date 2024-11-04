@@ -58,45 +58,45 @@
     <main class="max-w-4xl mx-auto p-6">
         <h1 class="text-3xl font-semibold text-gray-800 mb-4 text-center">Personal Space</h1>
 
-        <!-- Upload Section -->
-        <section class="bg-white shadow-md rounded-lg p-6 mb-6">
-            <h2 class="text-xl font-semibold mb-4">Upload a new summary</h2>
-            <form id="uploadForm">
-                <div class="space-y-4">
-                    <div>
-                        <label for="niveau" class="block text-sm font-medium text-gray-700">Niveau</label>
-                        <select id="niveau" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
-                            <option>Choose Niveau</option>
-                            <option>API1</option>
-                            <option>API2</option>
-                            <option>CI1</option>
-                            <option>CI2</option>
-                            <option>CI3</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="filiere" class="block text-sm font-medium text-gray-700">Filière</label>
-                        <select id="filiere" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
-                            <option value="">Choose Branch</option>
-                            <option>IAGI</option>
-                            <option>MSEI</option>
-                            <option>GEM</option>
-                            <option>GMSI</option>
-                            <option>GSI</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="module" class="block text-sm font-medium text-gray-700">Module</label>
-                        <select id="module" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
-                            <option>Choose Module</option>
-                            <option>Module1</option>
-                            <option>Module2</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="button" onclick="uploadSummary()" class="mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full">Upload</button>
-            </form>
-        </section>
+<!-- Upload Section -->
+<section class="bg-white shadow-md rounded-lg p-6 mb-6">
+    <h2 class="text-xl font-semibold mb-4">Upload a new summary</h2>
+    <form id="uploadForm">
+        <div class="space-y-4">
+            <div>
+                <label for="niveau" class="block text-sm font-medium text-gray-700">Niveau</label>
+                <select id="niveau" class="mt-1 block w-full p-2 border rounded-lg border-gray-300" onchange="handleNiveauChange()">
+                    <option>Choose Niveau</option>
+                    <option>API1</option>
+                    <option>API2</option>
+                    <option>CI1</option>
+                    <option>CI2</option>
+                    <option>CI3</option>
+                </select>
+            </div>
+            <div>
+                <label for="filiere" class="block text-sm font-medium text-gray-700">Filière</label>
+                <select id="filiere" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
+                    <option value="">Choose Branch</option>
+                    <option>IAGI</option>
+                    <option>MSEI</option>
+                    <option>GEM</option>
+                    <option>GMSI</option>
+                    <option>GSI</option>
+                </select>
+            </div>
+            <div>
+                <label for="module" class="block text-sm font-medium text-gray-700">Module</label>
+                <select id="module" class="mt-1 block w-full p-2 border rounded-lg border-gray-300">
+                    <option>Choose Module</option>
+                    <option>Module1</option>
+                    <option>Module2</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" onclick="uploadSummary()" class="mt-4 bg-primary text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full">Upload</button>
+    </form>
+</section>
 
         <h1 class="text-3xl font-semibold text-gray-800 mb-4 text-center">My Summaries</h1>
         <!-- Personal Summary List -->
@@ -139,9 +139,55 @@
     <script src="scripts/mySummaries.js"></script>
 
     <script>
-        function uploadSummary() {
-            alert('Summary uploaded successfully!');
+        // =================================================================================================
+        // api can t choose filiere
+        function handleNiveauChange() {
+            const niveau = document.getElementById('niveau').value;
+            const filiere = document.getElementById('filiere');
+
+            // Désactiver le champ "Filière" si "API1" ou "API2" est sélectionné
+            if (niveau === 'API1' || niveau === 'API2') {
+                filiere.value = "";  // Réinitialiser la sélection
+                filiere.disabled = true;
+            } else {
+                filiere.disabled = false;
+            }
         }
+
+            function uploadSummary() {
+            const niveau = document.getElementById('niveau').value;
+            const filiere = document.getElementById('filiere').value;
+            const module = document.getElementById('module').value;
+
+            if (niveau && filiere && module) {
+                const summariesContainer = document.getElementById('summaries-container');
+
+                // Créer un nouvel élément pour afficher le résumé
+                const newSummary = document.createElement('div');
+                newSummary.classList.add('bg-gray-50', 'p-4', 'rounded-lg', 'flex', 'justify-between', 'items-center');
+                
+                // Ajouter le contenu du résumé
+                newSummary.innerHTML = `
+                    <div>
+                        <h3 class="text-lg font-semibold">${module}</h3>
+                        <p class="text-gray-500 text-sm">${niveau} - ${filiere}</p>
+                    </div>
+                    <button onclick="deleteSummary('${Date.now()}')" class="text-red-500 hover:text-red-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 5a1 1 0 00-1 1v8a1 1 0 102 0V6a1 1 0 00-1-1zm3-3a1 1 0 00-1 1v1H8V3a1 1 0 10-2 0v1H5a1 1 0 100 2h10a1 1 0 100-2h-1V3a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                `;
+
+                // Ajouter le nouveau résumé dans le conteneur
+                summariesContainer.appendChild(newSummary);
+                
+                alert('Summary uploaded successfully!');
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        }
+
 
         function deleteSummary(summaryId) {
             const summaryElement = document.getElementById(summaryId);
