@@ -20,19 +20,21 @@
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Votre mot de passe">
             </div>
             <div class="flex justify-center">
-                <!-- Bouton de connexion avec redirection vers niveau.html -->
-                <button onclick="redirectToNiveau()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                    Connexion
-                </button>
+             <button onclick="loginUser()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Connexion
+            </button>
             </div>
         </form>
         <p class="text-center text-gray-500 text-sm mt-4">Pas encore de compte ? <a href="signup.html" class="text-blue-500 hover:underline">S'inscrire</a></p>
     </div>
 
-    <script>
-        function redirectToNiveau() {
-            window.location.href = "niveau.html";
+
+
+<script>
+        function loginUser() {
+            localStorage.setItem("loggedIn", "true");
+            window.location.href = "index.html";
         }
-    </script>
+</script>
 </body>
 </html>

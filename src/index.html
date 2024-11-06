@@ -11,81 +11,86 @@
 <body class="min-h-screen bg-gray-100">
   
   <!-- Navigation bar -->
-  <nav class="bg-primary p-4 flex justify-between items-center">
-    <div class="flex items-center space-x-10 justify-evenly hidden sm:flex">
-      <div class="text-white font-bold">ENSummaries</div>
-      <div class="text-white space-x-4 items-center flex justify-between">
-        <div class="space-x-8 flex">
-          <div class=" flex space-x-2">
-            
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-            </svg>
-            <a href="index.html" class="hover:text-gray-200">Home</a>
-            
-          </div>
-          <div class=" flex space-x-2">
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-            </svg>
-            
-            <a href="niveau.html" class="hover:text-gray-200">Notes</a>
-          </div>
-          <div class=" flex space-x-2"> 
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-            </svg>
-            
-            <a href="contact.html" class="hover:text-gray-200">Contact</a>
-          </div>
-          
+  <nav class="bg-primary p-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+            <!-- Logo - always visible -->
+            <div class="text-white font-bold text-xl">
+                ENSummaries
+            </div>
+
+            <!-- Desktop Navigation - hidden on mobile -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-gray-200 flex items-center space-x-2">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="niveau.html" class="text-white hover:text-gray-200 flex items-center space-x-2">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span>Notes</span>
+                    </a>
+                    <a href="contact.html" class="text-white hover:text-gray-200 flex items-center space-x-2">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar - visible on desktop -->
+                <div class="relative">
+                    <input type="text" placeholder="Search notes..." class="w-64 px-4 py-1 pl-10 pr-4 rounded-lg focus:outline-none">
+                    <svg class="h-5 w-5 text-gray-500 absolute left-3 top-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+
+                <!-- Auth Buttons - visible on desktop -->
+                <div class="flex space-x-4">
+                    <a href="login.html" class=" text-white bg-gray-600  px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">Log in</a>
+                    <a href="signup.html" class="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden flex items-center space-x-4">
+                <!-- Search Bar - centered on mobile -->
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="w-40 px-4 py-1 pl-10 pr-4 rounded-lg focus:outline-none">
+                    <svg class="h-5 w-5 text-gray-500 absolute left-3 top-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <button onclick="toggleMenu()" class="text-white">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden mt-4 bg-blue-700 rounded-lg p-4">
+            <a href="index.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Home</a>
+            <a href="niveau.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Notes</a>
+            <a href="contact.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Contact</a>
+        </div>
     </div>
-    
-    <!-- SVG Container -->
-    <div class=" md:hidden flex justify-between w-full sm:w-auto">
-      <!-- Left-aligned SVG -->
-      <div class="sm:hidden flex space-x-2">
-        <svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-        </svg>
-        <div class="text-white font-bold">ENSummaries</div>
-      </div>
-      
-      <!-- Right-aligned SVG -->
-      <div>
-        <svg class="h-5 w-5 md:text-gray-400 text-white " fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-        </svg>
-      </div>
-    </div>
-    <div class="hidden md:block flex justify-center items-center">
-      <div class="flex justify-evenly items-center relative">
-        <input type="text" placeholder="Search notes..." class="w-16 hidden md:block md:w-40 pl-8 pr-4 py-1 rounded-md ">
-        <svg class=" left-2 top-2 h-4 w-4 text-gray-400 absolute" fill="currentColor" viewbox="0 0 20 20">
-          <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-        </svg>
-      </div>
-      
-    </div>
-    
-    <!-- Boutons Se Connecter et S'inscrire -->
-    <div class="hidden lg:flex lg:space-x-4">
-      <a href="login.html" class="bg-white text-primary font-bold py-1 px-4 rounded hover:bg-gray-100">
-        Se Connecter
-      </a>
-      <a href="signup.html" class="bg-white text-primary font-bold py-1 px-4 rounded hover:bg-gray-100">
-        S'inscrire
-      </a>
-      
-    </div>
-    <div class="flex lg:hidden">
-      <svg class="h-6 w-6 text-white ml-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-      </svg>
-    </div>
-  </nav>
+</nav>
+
+<script>
+  function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+  }
+</script>
   
   <!--#################################################-->
   
@@ -98,39 +103,43 @@
       <a href="niveau.html">Start Now</a>
     </button>
   </div>
-  
-  <!-- top Summaries section -->
-  <section class="max-w-3xl mx-auto my-12">
-    <h2 class="text-center text-2xl font-semibold text-gray-700 mb-8">Top Summaries</h2>
-    <div id="summaries-container" class="space-y-6">
-      <!-- Les résumés seront affichés ici -->
+
+<!-- Top Summaries section -->
+   <section class="max-w-3xl mx-auto my-6 sm:my-12 px-4">
+    <h2 class="text-center text-xl sm:text-2xl font-semibold text-gray-700 mb-6 sm:mb-8">Top Summaries</h2>
+    <div id="summaries-container" class="space-y-4 sm:space-y-6">
+        <!-- Summaries will be displayed here -->
     </div>
-  </section>
-  
-  <div id="comment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white rounded-lg p-6 w-full max-w-lg">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-lg font-semibold">Add Comment</h3>
-        <button onclick="closeCommentModal()" class="text-gray-500 hover:text-gray-700">
-          <svg class="w-5 h-5" fill="currentColor">
-            <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0L10 8.586l2.293-2.293a1 1 0 111.414 1.414L11.414 10l2.293 2.293a1 1 0 01-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-      <textarea id="comment-input" class="w-full h-32 p-2 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Write your comment..."></textarea>
-      <div class="mt-4 flex justify-end">
-        <button onclick="handleComment()" class="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
-          <svg class="w-4 h-4 mr-2" fill="currentColor">
-            <path d="M2 3l18 9-18 9v-6l12-3-12-3z" />
-          </svg>
-          Publish
-        </button>
-      </div>
+</section>
+
+<!-- Modal -->
+<div id="comment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg p-4 sm:p-6 w-full max-w-lg">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-semibold">Add Comment</h3>
+            <button onclick="closeCommentModal()" class="text-gray-500 hover:text-gray-700">
+                <svg class="w-5 h-5" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0L10 8.586l2.293-2.293a1 1 0 111.414 1.414L11.414 10l2.293 2.293a1 1 0 01-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+        <textarea id="comment-input" 
+                  class="w-full h-32 p-2 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-primary focus:border-transparent" 
+                  placeholder="Write your comment..."></textarea>
+        <div class="mt-4 flex justify-end">
+            <button onclick="handleComment()" 
+                    class="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                <svg class="w-4 h-4 mr-2" fill="currentColor">
+                    <path d="M2 3l18 9-18 9v-6l12-3-12-3z" />
+                </svg>
+                Publish
+            </button>
+        </div>
     </div>
-  </div>
+</div>
   
   <!-- ABOUT section -->
-  <section class="bg-gray-200 py-12 text-center">
+  <section class="bg-gray-200 py-12 text-center" id="about">
     <h2 class="text-2xl font-semibold text-gray-700 mb-4">About</h2>
     <p class="max-w-2xl mx-auto text-gray-600 mb-8">
       ENSummaries allows students to explore study materials and insights from their peers, providing a richer understanding of topics through different viewpoints.
@@ -144,8 +153,8 @@
             <path d="M5 3h14a1 1 0 011 1v16a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1zm13 14H6v-1h12v1zm0-4H6v-1h12v1zm0-4H6V8h12v1z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-gray-700 mb-2">Résumés Organisés</h3>
-        <p class="text-gray-600">Tous les documents classés par niveau et filière</p>
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">Organized Summaries</h3>
+        <p class="text-gray-600">All documents are organized by level and field</p>
       </div>
       
       <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
@@ -154,33 +163,36 @@
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-gray-700 mb-2">Partage Facile</h3>
-        <p class="text-gray-600">Téléchargement et partage en quelques clics</p>
+        <h3 class="text-lg font-semibold text-gray-700 mb-2">Easy Sharing</h3>
+        <p class="text-gray-600">Download and share with just a few clicks</p>
       </div>
     </div>
   </section>
+
+
+  <!--Footer-->
   <footer class="bg-gray-700 text-white py-4">
     <div class="max-w-3xl mx-auto px-4">
       <div class="flex flex-wrap justify-between">
         <!-- Sitemap -->
         <div class="w-full md:w-1/3 mb-4">
-          <h3 class="font-semibold text-lg mb-4">Plan du site</h3>
+          <h3 class="font-semibold text-lg mb-4">Site Map</h3>
           <ul class="space-y-2">
-            <li><a href="index.html" class="hover:text-gray-400 transition-colors duration-200">Accueil</a></li>
-            <li><a href="about.html" class="hover:text-gray-400 transition-colors duration-200">À propos</a></li>
+            <li><a href="index.html" class="hover:text-gray-400 transition-colors duration-200">Home</a></li>
+            <li><a href="#about" class="hover:text-gray-400 transition-colors duration-200">About</a></li>
             <li><a href="niveau.html" class="hover:text-gray-400 transition-colors duration-200">Notes</a></li>
             <li><a href="contact.html" class="hover:text-gray-400 transition-colors duration-200">Contact</a></li>
           </ul>
         </div>
         <!-- Contact Info -->
         <div class="w-full md:w-1/3 mb-4">
-          <h3 class="font-semibold text-lg mb-4">Contactez-nous</h3>
+          <h3 class="font-semibold text-lg mb-4">Contact Us</h3>
           <p class="mb-2">Email : <a href="mailto:contact@ensummaries.com" class="hover:text-gray-400 transition-colors duration-200">contact@ensummaries.com</a></p>
           <p>Téléphone : <a href="tel:+1234567890" class="hover:text-gray-400 transition-colors duration-200">+1 (234) 567-890</a></p>
         </div>
         <!-- Social Media -->
         <div class="w-full md:w-1/3 mb-4">
-          <h3 class="font-semibold text-lg mb-4 px-6">Suivez-nous</h3>
+          <h3 class="font-semibold text-lg mb-4 px-6">Follow Us</h3>
           <div class="flex justify-center space-x-6 py-8 bg-gray-700">
             <a href="#" class="relative group">
               <svg class="w-10 h-10 fill-current text-pink-500 group-hover:text-pink-600 transition duration-200" viewBox="0 0 24 24" aria-label="Instagram">
@@ -207,12 +219,55 @@
         </div>
       </div>
       <div class="mt-2 text-center text-gray-500">
-        <p>&copy; 2023 ENSummaries. Tous droits réservés.</p>
+        <p>&copy; 2023 ENSummaries. All rights reserved.</p>
       </div>
     </div>
   </footer>
   
-  
+<script>
+  function updateNavigation() {
+    const loggedIn = localStorage.getItem("loggedIn") === "true";
+
+    const authButtons = document.querySelector('.flex.space-x-4'); 
+    const mobileMenu = document.getElementById('mobileMenu');      
+
+    if (loggedIn) {
+      authButtons.innerHTML = `
+        <a href="personal.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Personal</a>
+        <button onclick="logout()" class="text-white bg-red-600 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200">Logout</button>
+      `;
+      mobileMenu.innerHTML += `
+        <a href="personal.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Personal</a>
+        <button onclick="logout()" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Logout</button>
+      `;
+    } else {
+      // Show login and sign-up options
+      authButtons.innerHTML = `
+        <a href="login.html" class="text-white bg-gray-600 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">Log in</a>
+        <a href="signup.html" class="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">Sign Up</a>
+      `;
+      mobileMenu.innerHTML += `
+      <a href="login.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Login</a>
+      <a href="signup.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Signup</a>
+    `;
+    }
+  }
+
+  // Function to simulate login action
+  function login() {
+    localStorage.setItem("loggedIn", "true");
+    window.location.href = "index.html"; // Redirect to the homepage
+  }
+
+  // Function to handle logout action
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html"; // Redirect to the homepage
+  }
+
+  // Run the navigation update function on page load
+  document.addEventListener("DOMContentLoaded", updateNavigation);
+</script>
   <script src="scripts/script.js"></script>
   
 </body>

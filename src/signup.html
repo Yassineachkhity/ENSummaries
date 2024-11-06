@@ -28,7 +28,7 @@
             </div>
             <div class="flex justify-center">
                 <!-- Bouton d'inscription avec redirection vers niveau.html -->
-                <button onclick="redirectToNiveau()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                <button onclick="loginUser()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                     Inscription
                 </button>
             </div>
@@ -37,8 +37,9 @@
     </div>
 
     <script>
-        function redirectToNiveau() {
-            window.location.href = "niveau.html";
+        function loginUser() {
+            localStorage.setItem("loggedIn", "true");
+            window.location.href = "index.html";
         }
     </script>
 </body>

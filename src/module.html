@@ -8,163 +8,221 @@
     <title>Document</title>
 </head>
 <body class="min-h-screen bg-gray-100">
-    <!-- Navigation bar -->
-    <nav class="bg-primary p-4 flex justify-between items-center">
-      <div class="flex items-center space-x-10 justify-evenly hidden sm:flex">
-          <div class="text-white font-bold">ENSummaries</div>
-          <div class="text-white space-x-4 items-center flex justify-between">
-              <div class="space-x-8 flex">
-                <div class=" flex space-x-2">
+<!-- Navigation bar -->
+<nav class="bg-primary p-4">
+  <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+          <!-- Logo - always visible -->
+          <div class="text-white font-bold text-xl">
+              ENSummaries
+          </div>
 
-                  <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          <!-- Desktop Navigation - hidden on mobile -->
+          <div class="hidden lg:flex items-center space-x-8">
+              <div class="flex space-x-6">
+                  <a href="index.html" class="text-white hover:text-gray-200 flex items-center space-x-2">
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                      <span>Home</span>
+                  </a>
+                  <a href="niveau.html" class="text-white hover:text-gray-200 flex items-center space-x-2">
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      <span>Notes</span>
+                  </a>
+                  <a href="contact.html" class="text-white hover:text-gray-200 flex items-center space-x-2">
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <span>Contact</span>
+                  </a>
+              </div>
+
+              <!-- Search Bar -->
+              <div class="relative">
+                  <input type="text" placeholder="Search notes..." class="w-64 px-4 py-1 pl-10 pr-4 rounded-lg focus:outline-none">
+                  <svg class="h-5 w-5 text-gray-500 absolute left-3 top-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <a href="index.html" class="hover:text-gray-200">Home</a>
-                  
-                </div>
-                <div class=" flex space-x-2">
-                  <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                  </svg>
-                  
-                  <a href="niveau.html" class="hover:text-gray-200">Notes</a>
-                </div>
-                <div class=" flex space-x-2"> 
-                  <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-                  </svg>
-                  
-                  <a href="contact.html" class="hover:text-gray-200">Contact</a>
-                </div>
-                  
+              </div>
+
+              <!-- Auth Buttons - dynamically displayed based on login status -->
+              <div id="authButtons" class="flex space-x-4">
+                  <!-- Content will be dynamically added here -->
               </div>
           </div>
-      </div>
-      
-      <!-- SVG Container -->
-      <div class=" md:hidden flex justify-between w-full sm:w-auto">
-          <!-- Left-aligned SVG -->
-          <div class="sm:hidden flex space-x-2">
-              <svg class="h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-              </svg>
-              <div class="text-white font-bold">ENSummaries</div>
-          </div>
-  
-          <!-- Right-aligned SVG -->
-          <div>
-              <svg class="h-5 w-5 md:text-gray-400 text-white " fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-              </svg>
+
+          <!-- Mobile Navigation -->
+          <div class="lg:hidden flex items-center space-x-4">
+              <div class="relative">
+                  <input type="text" placeholder="Search..." class="w-40 px-4 py-1 pl-10 pr-4 rounded-lg focus:outline-none">
+                  <svg class="h-5 w-5 text-gray-500 absolute left-3 top-1.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+              </div>
+              <button onclick="toggleMenu()" class="text-white">
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+              </button>
           </div>
       </div>
-      <div class="hidden md:block flex justify-center items-center">
-        <div class="flex justify-evenly items-center relative">
-          <input type="text" placeholder="Search notes..." class="w-16 hidden md:block md:w-40 pl-8 pr-4 py-1 rounded-md ">
-          <svg class=" left-2 top-2 h-4 w-4 text-gray-400 absolute" fill="currentColor" viewbox="0 0 20 20">
-              <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.1a1 1 0 01-1.42 1.42l-4.1-4.1zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
-            </svg>
-        </div>
-        
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobileMenu" class="hidden lg:hidden mt-4 bg-blue-700 rounded-lg p-4">
+          <a href="index.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Home</a>
+          <a href="niveau.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Notes</a>
+          <a href="contact.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Contact</a>
+          <div id="mobileAuthButtons">
+              <!-- Content will be dynamically added here -->
+          </div>
       </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+  }
+
+  function loadAuthButtons() {
+      const authButtons = document.getElementById('authButtons');
+      const mobileAuthButtons = document.getElementById('mobileAuthButtons');
+      authButtons.innerHTML = '';
+      mobileAuthButtons.innerHTML = '';
+
+      if (localStorage.getItem('loggedIn') === 'true') {
+          // Logged in: show Logout and Personal links
+          authButtons.innerHTML = `
+              <a href="personal.html" class="text-white bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200">Personal</a>
+              <button onclick="logout()" class="text-white bg-red-600 px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200">Logout</button>
+          `;
+          mobileAuthButtons.innerHTML = `
+              <a href="personal.html" class="block text-white py-2 hover:bg-blue-600 rounded px-3">Personal</a>
+              <button onclick="logout()" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Logout</button>
+          `;
+      } else {
+          // Not logged in: show Log in and Sign Up links
+          authButtons.innerHTML = `
+              <a href="login.html" class="text-white bg-gray-600 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200">Log in</a>
+              <a href="signup.html" class="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">Sign Up</a>
+          `;
+          mobileAuthButtons.innerHTML = `
+              <a href="login.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Log in</a>
+              <a href="signup.html" class="block text-white py-2 hover:bg-blue-800 rounded px-3">Sign Up</a>
+          `;
+      }
+  }
+
+  function logout() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'login.html';
+  }
+  // Load the auth buttons on page load
+  document.addEventListener('DOMContentLoaded', loadAuthButtons);
 
 
-  </nav>
+</script>
  <!--#################################################-->
     <!-- Summaries for the related module -->
     <h1 id="module-title" class="text-center font-bold text-3xl mb-2 mt-8 underline"></h1>
 
-    <script>
-
-    </script>
-
-    <main class="max-w-4xl mx-auto my-8 px-4">
-      <h1 class="text-center text-2xl font-semibold text-gray-700 mb-8">Summaries</h1>
-          
-      <!-- Conteneur pour afficher les résumés -->
+    <main class="max-w-4xl mx-auto my-4 sm:my-8 px-4">
+      <h1 id="module-title" class="text-center text-xl sm:text-2xl font-semibold text-gray-700 mb-6 sm:mb-8">Summaries</h1>
+      
+      <!-- Summaries container -->
       <div id="module-summaries-container" class="space-y-4"></div>
 
+      <!-- See More button -->
+      <button 
+          onclick="displayMore()" 
+          class="block mx-auto bg-primary text-white px-4 sm:px-6 py-2 rounded-md hover:bg-blue-600 mt-4 sm:mt-6 text-sm sm:text-base">
+          See More
+      </button>
+  </main>
 
-      <div id="comment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-white rounded-lg p-6 w-full max-w-lg">
+  <!-- Modal -->
+  <div id="comment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg p-4 sm:p-6 w-full max-w-lg mx-4">
           <div class="flex justify-between items-center mb-4">
-            <h3 class="text-lg font-semibold">Add Comment</h3>
-            <button onclick="closeCommentModal()" class="text-gray-500 hover:text-gray-700">
-              <svg class="w-5 h-5" fill="currentColor">
-            <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0L10 8.586l2.293-2.293a1 1 0 111.414 1.414L11.414 10l2.293 2.293a1 1 0 01-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-            </button>
+              <h3 class="text-lg font-semibold">Add Comment</h3>
+              <button onclick="closeCommentModal()" class="text-gray-500 hover:text-gray-700">
+                  <svg class="w-5 h-5" fill="currentColor">
+                      <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0L10 8.586l2.293-2.293a1 1 0 111.414 1.414L11.414 10l2.293 2.293a1 1 0 01-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 01-1.414-1.414L8.586 10 6.293 7.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+              </button>
           </div>
-          <textarea id="comment-input" class="w-full h-32 p-2 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Write your comment..."></textarea>
+          <textarea id="comment-input" 
+                    class="w-full h-32 p-2 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-primary focus:border-transparent" 
+                    placeholder="Write your comment..."></textarea>
           <div class="mt-4 flex justify-end">
-            <button onclick="handleComment()" class="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
-              <svg class="w-4 h-4 mr-2" fill="currentColor">
-                <path d="M2 3l18 9-18 9v-6l12-3-12-3z" />
-              </svg>
-              Publish
-            </button>
+              <button onclick="handleComment()" 
+                      class="flex items-center bg-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor">
+                      <path d="M2 3l18 9-18 9v-6l12-3-12-3z" />
+                  </svg>
+                  <span class="text-sm sm:text-base">Publish</span>
+              </button>
           </div>
-        </div>
       </div>
+  </div>
 
-      <button class="block mx-auto bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-600  mt-6" onclick="displayMore()">
-        See More
-     </button>
-    </main>
-
-    <footer class="bg-gray-700 text-white py-4">
-      <div class="max-w-3xl mx-auto px-4">
-        <div class="flex flex-wrap justify-between">
-          <!-- Sitemap -->
-          <div class="w-full md:w-1/3 mb-4">
-            <h3 class="font-semibold text-lg mb-4">Plan du site</h3>
-            <ul class="space-y-2">
-              <li><a href="index.html" class="hover:text-gray-400 transition-colors duration-200">Accueil</a></li>
-              <li><a href="about.html" class="hover:text-gray-400 transition-colors duration-200">À propos</a></li>
-              <li><a href="niveau.html" class="hover:text-gray-400 transition-colors duration-200">Notes</a></li>
-              <li><a href="contact.html" class="hover:text-gray-400 transition-colors duration-200">Contact</a></li>
-            </ul>
-          </div>
-          <!-- Contact Info -->
-          <div class="w-full md:w-1/3 mb-4">
-            <h3 class="font-semibold text-lg mb-4">Contactez-nous</h3>
-            <p class="mb-2">Email : <a href="mailto:contact@ensummaries.com" class="hover:text-gray-400 transition-colors duration-200">contact@ensummaries.com</a></p>
-            <p>Téléphone : <a href="tel:+1234567890" class="hover:text-gray-400 transition-colors duration-200">+1 (234) 567-890</a></p>
-          </div>
-          <!-- Social Media -->
-          <div class="w-full md:w-1/3 mb-4">
-            <h3 class="font-semibold text-lg mb-4 px-6">Suivez-nous</h3>
-            <div class="flex justify-center space-x-6 py-8 bg-gray-700">
-              <a href="#" class="relative group">
-                <svg class="w-10 h-10 fill-current text-pink-500 group-hover:text-pink-600 transition duration-200" viewBox="0 0 24 24" aria-label="Instagram">
-                  <!-- Instagram SVG path -->
+   <!--Footer-->
+  <footer class="bg-gray-700 text-white py-4">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="flex flex-wrap justify-between">
+        <!-- Sitemap -->
+        <div class="w-full md:w-1/3 mb-4">
+          <h3 class="font-semibold text-lg mb-4">Site Map</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-gray-400 transition-colors duration-200">Home</a></li>
+            <li><a href="#about" class="hover:text-gray-400 transition-colors duration-200">About</a></li>
+            <li><a href="niveau.html" class="hover:text-gray-400 transition-colors duration-200">Notes</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400 transition-colors duration-200">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div class="w-full md:w-1/3 mb-4">
+          <h3 class="font-semibold text-lg mb-4">Contact Us</h3>
+          <p class="mb-2">Email : <a href="mailto:contact@ensummaries.com" class="hover:text-gray-400 transition-colors duration-200">contact@ensummaries.com</a></p>
+          <p>Téléphone : <a href="tel:+1234567890" class="hover:text-gray-400 transition-colors duration-200">+1 (234) 567-890</a></p>
+        </div>
+        <!-- Social Media -->
+        <div class="w-full md:w-1/3 mb-4">
+          <h3 class="font-semibold text-lg mb-4 px-6">Follow Us</h3>
+          <div class="flex justify-center space-x-6 py-8 bg-gray-700">
+            <a href="#" class="relative group">
+              <svg class="w-10 h-10 fill-current text-pink-500 group-hover:text-pink-600 transition duration-200" viewBox="0 0 24 24" aria-label="Instagram">
+                <!-- Instagram SVG path -->
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.248 3.608-1.31 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.281.059-2.563.334-3.637 1.408-1.074 1.074-1.349 2.356-1.408 3.637-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.059 1.281.334 2.563 1.408 3.637 1.074 1.074 2.356 1.349 3.637 1.408 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.281-.059 2.563-.334 3.637-1.408 1.074-1.074 1.349-2.356 1.408-3.637.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.059-1.281-.334-2.563-1.408-3.637-1.074-1.074-2.356-1.349-3.637-1.408-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/>
-                </svg>
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white mt-2">Instagram</span>
-              </a>
-              <a href="#" class="relative group">
-                <svg class="w-10 h-10 fill-current text-blue-600 group-hover:text-blue-700 transition duration-200" viewBox="0 0 24 24" aria-label="Facebook">
-                  <!-- Facebook SVG path -->
+              </svg>
+              <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white mt-2">Instagram</span>
+            </a>
+            <a href="#" class="relative group">
+              <svg class="w-10 h-10 fill-current text-blue-600 group-hover:text-blue-700 transition duration-200" viewBox="0 0 24 24" aria-label="Facebook">
+                <!-- Facebook SVG path -->
                 <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116c.729 0 1.326-.597 1.326-1.326V1.326C24 .597 23.403 0 22.675 0z"/>
-                </svg>
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white mt-2">Facebook</span>
-              </a>
-              <a href="#" class="relative group">
-                <svg class="w-10 h-10 fill-current text-blue-400 group-hover:text-blue-500 transition duration-200" viewBox="0 0 24 24" aria-label="Twitter">
-                  <!-- Twitter SVG path -->
+              </svg>
+              <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white mt-2">Facebook</span>
+            </a>
+            <a href="#" class="relative group">
+              <svg class="w-10 h-10 fill-current text-blue-400 group-hover:text-blue-500 transition duration-200" viewBox="0 0 24 24" aria-label="Twitter">
+                <!-- Twitter SVG path -->
                 <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.608 1.794-1.574 2.163-2.723-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.087-.205-7.713-2.164-10.141-5.144-.423.722-.666 1.561-.666 2.457 0 1.695.863 3.188 2.173 4.066-.802-.026-1.555-.246-2.213-.616v.062c0 2.367 1.684 4.342 3.918 4.788-.41.111-.843.171-1.287.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.6 3.417-1.68 1.318-3.809 2.105-6.102 2.105-.396 0-.79-.023-1.175-.067 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14.002-7.496 14.002-13.986 0-.21 0-.423-.015-.634.961-.695 1.8-1.562 2.46-2.549z"/>
-                </svg>
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white mt-2">Twitter</span>
-              </a>
-            </div>
+              </svg>
+              <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full opacity-0 group-hover:opacity-100 text-sm text-white mt-2">Twitter</span>
+            </a>
           </div>
         </div>
-        <div class="mt-2 text-center text-gray-500">
-          <p>&copy; 2023 ENSummaries. Tous droits réservés.</p>
-        </div>
       </div>
-    </footer>
-
+      <div class="mt-2 text-center text-gray-500">
+        <p>&copy; 2023 ENSummaries. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
           <script src="scripts/moduleScript.js"></script>
 </body>
